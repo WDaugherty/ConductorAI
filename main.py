@@ -1,5 +1,5 @@
 """
-largest number in PDF finder
+Largest number in PDF finder
 
 This script finds the largest number in a PDF document, considering both raw numbers
 and numbers with contextual scaling (e.g., "in millions").
@@ -200,25 +200,7 @@ def find_largest_nlp_number(nlp_results: dict) -> tuple:
     return None
 
 
-# def verify_number(number: float, context: str, pdf_path: str) -> bool:
-#     """
-#     Verifies if a number exists in the PDF with its surrounding context.
-
-#     Args:
-#         number (float): The number to verify.
-#         context (str): The expected surrounding context.
-#         pdf_path (str): Path to the PDF file.
-
-#     Returns:
-#         bool: True if the number is verified, False otherwise.
-#     """
-#     with open(pdf_path, 'rb') as file:
-#         reader = PyPDF2.PdfReader(file)
-#         for page in reader.pages:
-#             text = page.extract_text()
-#             if str(number) in text and context in text:
-#                 return True
-#     return False
+#TODO: Create a verification test function 
 
 def main(pdf_path: str):
     """
@@ -258,7 +240,7 @@ def main(pdf_path: str):
     execution_time = end_time - start_time
     print(f"\nTotal execution time: {execution_time:.2f} seconds")
 
-    #TODO: Work on this improvement 
+    #TODO: Finish this implementation
     # # Verify the largest numbers
     # if largest_base:
     #     verified = verify_number(largest_base[0], "", pdf_path)
@@ -268,7 +250,7 @@ def main(pdf_path: str):
     #     verified = verify_number(largest_nlp[0], largest_nlp[2], pdf_path)
     #     print(f"Largest NLP number verified: {verified}")
 
-#MOdify the PDF path for your use case
+#TODO: Modify the PDF path for your use case
 if __name__ == "__main__":
-    pdf_path = '/Users/wdaugherty/Downloads/FY25 Air Force Working Capital Fund.pdf'
+    pdf_path = 'YOUR PDF link here'
     main(pdf_path)
