@@ -1,0 +1,3 @@
+#Pacakages to import 
+PyPDF2
+prettytable
